@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #0f0c29; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#players-option {
+  display: flex;
+  margin: 30px 0;
+}
+
+#players-option div {
+  margin: 0 70px;
+}
+
+#players-option label {
+  color: #fffafa;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: block;
+}
+
+.player-radio-btn {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+.player-radio-btn::after {
+  content: "";
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: darkred;
+  border: 2px solid #fffafa;
+  border-radius: 50%;
+}
+
+.player-radio-btn:checked::after {
+  background: darkgreen;
+  box-shadow: 0 0 7px #fffafa;
+}
+
+#game-box {
+  width: 300px;
+  height: 300px;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  grid-gap: 10px;
+  margin-bottom: 50px;
+}
+
+.box {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fffafa;
+  border-radius: 10px;
+  border: none;
+}
+
+i {
+  display: inline-block;
+  color: #fffafa;
+  font-size: 70px;
+  transition: color 0.25s ease;
+}
+
+.animate {
+  animation: 1.25s animate;
+}
+
+#score-boxes-container {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+#score-boxes-container .score-box {
+  font-size: 1.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.score-box.score-box1 {
+  color: #3359ff;
+}
+
+.score-box.score-box2 {
+  color: #ff6933;
+}
+
+.score-box span {
+  margin-left: 8px;
+}
+
+/* #game-result {
+  color: rgb(190, 21, 21);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 30px 0;
+  transition: 0.5s;
+} */
+
+#play-again-btn {
+  width: 150px;
+  height: 40px;
+  background: #302b63;
+  color: #fffafa;
+  font-size: 1rem;
+  font-weight: 900;
+  border-radius: 10px;
+  display: block;
+  cursor: pointer;
+  outline: none;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(1.3, 1.3);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
